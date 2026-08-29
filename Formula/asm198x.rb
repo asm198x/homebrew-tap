@@ -1,20 +1,20 @@
 class Asm198x < Formula
   desc "A family of modern, single-binary assemblers for retro CPUs. 6502 today; more to follow."
   homepage "https://asm198x.github.io"
-  version "0.0.49"
+  version "0.0.50"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/asm198x/asm198x/releases/download/asm198x-v0.0.49/asm198x-aarch64-apple-darwin.tar.xz"
-      sha256 "326d5c78d015d449be239990b782f77a08657c76e68b9481b888bd26fc8ef004"
+      url "https://github.com/asm198x/asm198x/releases/download/asm198x-v0.0.50/asm198x-aarch64-apple-darwin.tar.xz"
+      sha256 "c332db54cc9923cfbdaa3ba2c9ce15892394407fb6500edd742093ca3d984eff"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/asm198x/asm198x/releases/download/asm198x-v0.0.49/asm198x-x86_64-apple-darwin.tar.xz"
-      sha256 "d1d9866886716e2dad6ec8078490e309d714176cc5364f5e7c9542c0d58d962c"
+      url "https://github.com/asm198x/asm198x/releases/download/asm198x-v0.0.50/asm198x-x86_64-apple-darwin.tar.xz"
+      sha256 "3ff305648daa19170b028dd3e59b22be63f68a0afa1fd6bd84041e2ffb1cf76a"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/asm198x/asm198x/releases/download/asm198x-v0.0.49/asm198x-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "47ecc7f124cf02998ca9fd30e0f3a3677687418b80e5ccad4ed7e09658161022"
+    url "https://github.com/asm198x/asm198x/releases/download/asm198x-v0.0.50/asm198x-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "e6e755d283bdb7484c03f959864f3bff9d49373f2bff8874b5e2a499cef5e89e"
   end
   license "GPL-2.0-or-later"
 
