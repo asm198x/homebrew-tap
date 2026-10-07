@@ -1,28 +1,35 @@
 class Asm198x < Formula
   desc "A family of modern, single-binary assemblers for retro CPUs. 6502 today; more to follow."
   homepage "https://asm198x.github.io"
-  version "0.0.58"
+  version "0.0.59"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/asm198x/asm198x/releases/download/asm198x-v0.0.58/asm198x-aarch64-apple-darwin.tar.xz"
-      sha256 "33ce9e925d511ad78a671959ad4f40d3f67ea453cba581436e1edf1feee45c41"
+      url "https://github.com/asm198x/asm198x/releases/download/asm198x-v0.0.59/asm198x-aarch64-apple-darwin.tar.xz"
+      sha256 "5b064ef4fe242588f9af5ab3aca25572a4e5e5cfe62cf05e9735ad8366e9d68d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/asm198x/asm198x/releases/download/asm198x-v0.0.58/asm198x-x86_64-apple-darwin.tar.xz"
-      sha256 "90ef74a03cc64bb26e8df63216719468f6be4f77202aa55eae6fafb0c9a8ae0b"
+      url "https://github.com/asm198x/asm198x/releases/download/asm198x-v0.0.59/asm198x-x86_64-apple-darwin.tar.xz"
+      sha256 "711e3006c782e4dd72ba20bd62214e35a48ae41a4dc9cf643b387b036469053b"
     end
   end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/asm198x/asm198x/releases/download/asm198x-v0.0.58/asm198x-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "7c253453f80b6715dff3e5f45dee5a96b4bed6cc2943dad597c9521ff9015291"
+  if OS.linux?
+    if Hardware::CPU.arm?
+      url "https://github.com/asm198x/asm198x/releases/download/asm198x-v0.0.59/asm198x-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "c271d2fe4cb8924eea97368c8b74de25024326c5b61c700eaa5411d16baf2ae6"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/asm198x/asm198x/releases/download/asm198x-v0.0.59/asm198x-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "1a93d844f0901cbe5b375c8aa9b78801f9500ff74b69cffb3b0f578ea199f9e2"
+    end
   end
   license "GPL-2.0-or-later"
 
   BINARY_ALIASES = {
-    "aarch64-apple-darwin":     {},
-    "x86_64-apple-darwin":      {},
-    "x86_64-pc-windows-gnu":    {},
-    "x86_64-unknown-linux-gnu": {},
+    "aarch64-apple-darwin":      {},
+    "aarch64-unknown-linux-gnu": {},
+    "x86_64-apple-darwin":       {},
+    "x86_64-pc-windows-gnu":     {},
+    "x86_64-unknown-linux-gnu":  {},
   }.freeze
 
   def target_triple
@@ -45,6 +52,9 @@ class Asm198x < Formula
       bin.install "asm198x"
     end
     if OS.mac? && Hardware::CPU.intel?
+      bin.install "asm198x"
+    end
+    if OS.linux? && Hardware::CPU.arm?
       bin.install "asm198x"
     end
     if OS.linux? && Hardware::CPU.intel?
