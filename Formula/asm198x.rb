@@ -1,25 +1,25 @@
 class Asm198x < Formula
   desc "A family of modern, single-binary assemblers for retro CPUs. 6502 today; more to follow."
   homepage "https://asm198x.github.io"
-  version "0.0.62"
+  version "0.0.63"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/asm198x/asm198x/releases/download/asm198x-v0.0.62/asm198x-aarch64-apple-darwin.tar.xz"
-      sha256 "27892f90f26f5b222b32025e1556f115689d1122336ab342002c5f273cf3793a"
+      url "https://github.com/asm198x/asm198x/releases/download/asm198x-v0.0.63/asm198x-aarch64-apple-darwin.tar.xz"
+      sha256 "a31daaa0ba4695e40b08c84dec3ada36ee7f1f76ffc4113a1015a23ee4541e99"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/asm198x/asm198x/releases/download/asm198x-v0.0.62/asm198x-x86_64-apple-darwin.tar.xz"
-      sha256 "d632af1d8ad0f12725d22da7a696856696cdad2b3100643aa6f17f7b4228b4a2"
+      url "https://github.com/asm198x/asm198x/releases/download/asm198x-v0.0.63/asm198x-x86_64-apple-darwin.tar.xz"
+      sha256 "214294c9f458a11f3c27816639a777faba40a53e3b22e83e04e5d481b6c94762"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/asm198x/asm198x/releases/download/asm198x-v0.0.62/asm198x-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "d3800fdc01a4f1a680e27545c5ba3c351f781490c39a89ce3c0c7150da5bc6d5"
+      url "https://github.com/asm198x/asm198x/releases/download/asm198x-v0.0.63/asm198x-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "b7a50c3e01a9cdfcadde9dab9dfb61c4436def479a620f1831749af1e84fcdda"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/asm198x/asm198x/releases/download/asm198x-v0.0.62/asm198x-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "8fbcd8445b7d62a3c2eccdb42302e8976c77e607a9ac68d1de57bee70101d5a0"
+      url "https://github.com/asm198x/asm198x/releases/download/asm198x-v0.0.63/asm198x-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "c345e3be20f0c9cf983d80c3b16406fdb9877f08216d17db5a3dff5d6e8b45db"
     end
   end
   license "GPL-2.0-or-later"
