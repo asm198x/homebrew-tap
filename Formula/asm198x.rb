@@ -1,25 +1,25 @@
 class Asm198x < Formula
-  desc "A family of modern, single-binary assemblers for retro CPUs. 6502 today; more to follow."
+  desc "Assemblers and disassemblers for retro CPUs in a single binary"
   homepage "https://asm198x.github.io"
-  version "0.0.66"
+  version "0.0.67"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/asm198x/asm198x/releases/download/asm198x-v0.0.66/asm198x-aarch64-apple-darwin.tar.xz"
-      sha256 "2a38257f7a87745cf29931d6d9b97ed62b1dd20397393678087b283b9cb5d1f6"
+      url "https://github.com/asm198x/asm198x/releases/download/asm198x-v0.0.67/asm198x-aarch64-apple-darwin.tar.xz"
+      sha256 "edc7a74b7394ea00c47a4109b3bb8f0e492244006d91025a4e22cf5720e5fb51"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/asm198x/asm198x/releases/download/asm198x-v0.0.66/asm198x-x86_64-apple-darwin.tar.xz"
-      sha256 "37a892557881bd8df660da8682b8d6418067ee9a4b6cf42c3129f2d10ae01442"
+      url "https://github.com/asm198x/asm198x/releases/download/asm198x-v0.0.67/asm198x-x86_64-apple-darwin.tar.xz"
+      sha256 "d1588919b26dfbb52d2db9cedfaa1ab1629dc1f560f3a321bcc5eaa66e5055fd"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/asm198x/asm198x/releases/download/asm198x-v0.0.66/asm198x-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "737e69826cae892cdc537f62debdb8a847a9d9b612a0e20129f17d6db00c8dcf"
+      url "https://github.com/asm198x/asm198x/releases/download/asm198x-v0.0.67/asm198x-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "2741acd2f5061ce4c717eaa1dd0685c40e70bec714b7c2d0be664f0e9d5c9b92"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/asm198x/asm198x/releases/download/asm198x-v0.0.66/asm198x-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "5fdae66e509d1cb5e7641f79be6544e2d034335d1e489da3dd6e66b059fc998c"
+      url "https://github.com/asm198x/asm198x/releases/download/asm198x-v0.0.67/asm198x-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "1641899945f3d8dcd99ef88f0b8fffd220f142a03f8894dec45de3d31a2e0789"
     end
   end
   license "GPL-2.0-or-later"
